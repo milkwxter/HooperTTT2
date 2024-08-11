@@ -41,7 +41,6 @@ if SERVER then
 	-- Give Loadout on respawn and rolechange
 	function ROLE:GiveRoleLoadout(ply, isRoleChange)
 		ply:GiveEquipmentWeapon("ttt2_hoop_pass")
-		ply:GiveEquipmentWeapon("ttt2_hoop_dunk")
 		ply:GiveEquipmentItem("item_ttt_armor")
 		ply:GiveEquipmentItem("item_ttt_nofalldmg")
 	end
@@ -49,7 +48,7 @@ if SERVER then
 	-- Remove Loadout on death and rolechange
 	function ROLE:RemoveRoleLoadout(ply, isRoleChange)
 		ply:StripWeapon("ttt2_hoop_pass")
-		ply:StripWeapon("ttt2_hoop_dunk")
 		ply:RemoveEquipmentItem("item_ttt_armor")
+		ply:RemoveEquipmentItem("item_ttt_nofalldmg")
 	end
 end
